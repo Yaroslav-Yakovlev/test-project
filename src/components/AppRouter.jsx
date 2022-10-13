@@ -18,7 +18,7 @@ const AppRouter = () => {
     return (
        <Routes>
            <Route path='/' element={<DevicesContainer samsungList={samsungList} />} />
-           <Route path='/device/:id' element={<Item />} />
+           <Route path='/device/:id' element={<Item  samsungList={samsungList} />} />
            <Route path='*' element={<NotFound/>}/>
        </Routes>
     );

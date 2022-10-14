@@ -1,13 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import '../styles/styles.css';
+import {Link} from "react-router-dom";
 
-function DevicesList(props) {
-    const { list } = props;
+function IPhoneDeviceList(props) {
+    const { iPhoneList } = props
+
 
     return (
-        <div className='container1'>
-            {list.map((device) => {
+        <div className='container2'>
+            {iPhoneList.map((device) => {
+                console.log(device.id)
                 return (
                     <div className='single__device' key={device.id}>
                         <div className='device'>
@@ -19,7 +20,7 @@ function DevicesList(props) {
                                     <span className='price'>Price: {device.price}</span>
 
                                     <button>
-                                        <Link to={`/device/${device.id}`}>Description</Link>
+                                        <Link to={`/device iphone/${device.id}`}>Description</Link>
                                     </button>
                                 </ul>
                             </div>
@@ -27,8 +28,9 @@ function DevicesList(props) {
                     </div>
                 )
             })}
-        </div>
-    )
-}
 
-export default DevicesList;
+        </div>
+    );
+};
+
+export default IPhoneDeviceList;

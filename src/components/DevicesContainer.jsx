@@ -1,17 +1,14 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import SamsungDevicesList from './SamsungDevicesList';
-import IPhoneDeviceList from "./IPhoneDeviceList";
+import DevicesList from "./DevicesList";
 
-const  DevicesContainer = (props) => {
-    const {samsungList, iPhoneList} = props;
+const  DevicesContainer = (data) => {
 
     return (
         <div>
             <Header />
-            <SamsungDevicesList samsungList={samsungList} />
-            <IPhoneDeviceList iPhoneList={iPhoneList} />
+        <DevicesList list={data} />
             <Footer />
         </div>
     );

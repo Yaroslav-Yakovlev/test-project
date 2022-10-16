@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 function Item({findItem}) {
     const {id} = useParams();
-    const item = findItem;
+    const item = findItem(id);
 
     return(
         <div className='device'>

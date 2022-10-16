@@ -8,7 +8,7 @@ const  DevicesContainer = (data) => {
     return (
         <div>
             <Header />
-        <DevicesList list={data} />
+                <DevicesList list={data} />
             <Footer />
         </div>
     );

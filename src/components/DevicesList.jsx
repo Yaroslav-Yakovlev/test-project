@@ -2,8 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/styles.css';
 
+
 function DevicesList(props) {
-    const devices = props.list.data;
+    const devices = props.list;
 
     return (
         <div className='devices__container' >

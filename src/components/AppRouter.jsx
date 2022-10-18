@@ -3,6 +3,8 @@ import {Route, Routes} from "react-router-dom";
 import DevicesContainer from "./DevicesContainer";
 import NotFound from "./NotFound";
 import Item from "./Item";
+import Cart from "./Cart";
+
 
 const AppRouter = () => {
     const data = [
@@ -20,6 +22,7 @@ const AppRouter = () => {
        <Routes>
            <Route path='/' element={<DevicesContainer data={data} />} />
            <Route path='/device/:id' element={<Item findItem={findItem}/>}/>
+           <Route path='/device/:id/cart' element={<Cart findItem={findItem}/>}/>
            <Route path='*' element={<NotFound/>}/>
        </Routes>
     );

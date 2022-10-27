@@ -3,12 +3,12 @@ import {useNavigate} from "react-router-dom";
 
 const Header = () => {
     const navigate = useNavigate();
-    const goHome = () => navigate('/')
+    const logoClickHandler = () => navigate('/')
 
     return (
-        <div className='nav'>
-            <div className='logo' onClick={goHome}>
-                <h4>Device.com</h4>
+        <div className='header'>
+            <div className='logo-container' >
+                <h4 className='logo' onClick={logoClickHandler}>Device.com</h4>
             </div>
         </div>
     );

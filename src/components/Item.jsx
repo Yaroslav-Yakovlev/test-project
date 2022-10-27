@@ -1,27 +1,34 @@
 import React from 'react';
 import {Link, useParams} from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function Item({findItem}) {
     const {id} = useParams();
     const item = findItem(id);
 
-    return(
+    return (
         <div>
             <Header/>
-        <div className='device'>
-            <div className='device__dscr'>
-                <h3>{item.brand}</h3>
-                <ul>
-                    <li>Screen: {item.screen}</li>
-                    <li>Storage: {item.memory}</li>
-                    <span className='price'>Price: {item.price}</span>
-                        <Link to={'/device/:id/cart'}>
-                            <button>Buy</button>
-                        </Link>
-                </ul>
-            </div>
-        </div>
+            <main className='main-item'>
+                <div className='device-item'>
+                    <div className='item-device-dscr'>
+                        <img className='img-device' alt='image' src={item.image}/>
+                        <h2>{item.brand}</h2>
+                        <ul>
+                            <li>Screen: {item.screen}</li>
+                            <li>Storage: {item.memory}</li>
+                            <div className='price-button'>
+                                <span className='price'>Price: {item.price}</span>
+                                <Link to={`/device/${id}/cart`}>
+                                    <button className='button-buy'>Buy</button>
+                                </Link>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <Footer/>
         </div>
     )
 }

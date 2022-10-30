@@ -21,7 +21,7 @@ function Item({findItem}) {
                             <div className='price-button'>
                                 <span className='price'>Price: {item.price}</span>
                                 <Link to={`/device/${id}/cart`}>
-                                    <button className='button-buy'>Buy</button>
+                                    <button className='btn'>Buy</button>
                                 </Link>
                             </div>
                         </ul>

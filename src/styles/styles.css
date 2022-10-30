@@ -1,14 +1,11 @@
 * {
     margin: 0;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
+    min-height: 100vh;
     --header-height: 60px;
     --footer-height: 50px;
 }
@@ -17,7 +14,7 @@ body {
     display: flex;
     line-height: var(--header-height);
     height: var(--header-height);
-    background: darkcyan;
+    background-image: linear-gradient(45deg, #00C4F0  0%, #79F0E8 100%);
 }
 
 .logo-container {
@@ -39,6 +36,7 @@ body {
 }
 
 .main {
+    background-color: lightcyan;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
     flex-direction: column;
@@ -58,13 +56,12 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    width: 230px;
+    width: 250px;
     height: 400px;
     border: 1px solid lightblue;
     border-radius: 3px;
     background-color: azure;
 }
-
 
 .img-device {
     height: 175px;
@@ -101,11 +98,12 @@ li {
 }
 
 .price {
+    margin: 0 30px 0 0;
     font-size: 18px;
     padding: 3px;
 }
 
-.btn-dscr {
+.btn {
     text-align: center;
     cursor: pointer;
     height: 2rem;
@@ -122,6 +120,7 @@ a {
 
 .main-item {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    background-color: azure;
     display: flex;
     flex-direction: row;
     align-content: flex-start;
@@ -136,18 +135,10 @@ a {
     display: inline-block;
 }
 
-.button-buy {
-    height: 30px;
-    width: 85px;
-    background: lightcyan;
-    border-radius: 5px;
-    border: 1px black solid;
-    margin-left: 2rem;
-}
-
 .main-cart {
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
     display: flex;
+    background-color: azure;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -157,7 +148,7 @@ a {
     text-align: center;
     font-size: 18px;
     color: white;
-    background-color: darkcyan;
+    background-image: linear-gradient(45deg, #00C4F0  0%, #79F0E8 100%);
     height: var(--footer-height);
     line-height: var(--footer-height);
 }

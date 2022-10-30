@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/styles.css';
-import devicesContainer from "./DevicesContainer";
 
 function DevicesList({list}) {
     return (
@@ -9,7 +8,7 @@ function DevicesList({list}) {
             {list.map((device) => {
                 return (
                     <div className='device' key={device.id}>
-                        <img className='img-device' src={device.image}/>
+                        <img className='img-device' alt='image' src={device.image}/>
                         <div className='device-dscr'>
                             <h3>{device.brand}</h3>
                             <ul>
@@ -17,7 +16,7 @@ function DevicesList({list}) {
                                 <li>Storage: {device.memory}</li>
                                 <span className='price'>Price: {device.price}</span>
                                 <div className="line"></div>
-                                <button className='btn-dscr'>
+                                <button className='btn'>
                                     <Link to={`/device/${device.id}`}>Description</Link>
                                 </button>
                             </ul>
